@@ -1,3 +1,5 @@
+;; https://practicalli.github.io/spacemacs/clj-refactor/
+
 ;; Exercise - 1
 
 (println "Hello, World!")
@@ -26,7 +28,7 @@
 
 ;; Exercise - 3
 
-(println "I will now count my chickens:")
+(println "I will; now count my chickens:")
 
 (println "Hens" (+ 25
                    (/ 30 6)))
@@ -164,7 +166,7 @@
 
 ;; raw input in lumo is an issue as of now.
 
-
+(read )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
