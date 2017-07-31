@@ -105,49 +105,49 @@
 (format "Hello %s" "World!")
 
 
-;(js/console.log "Let's talk about %s." my-name)
-;(js/console.log "He's %s inches tall." my-height)
-;(js/console.log "He's %d pounds heavy." my-weight)
-;(js/console.log "Actually that's not too heavy.")
-;(js/console.log "He's got %s eyes and %s hair." my-eyes my-hair)
-;(js/console.log "His teeth are usually %s depending on the coffee." my-teeth)
+(format "Let's talk about %s." my-name)
+(format "He's %s inches tall." my-height)
+(format "He's %d pounds heavy." my-weight)
+(format "Actually that's not too heavy.")
+(format "He's got %s eyes and %s hair." my-eyes my-hair)
+(format "His teeth are usually %s depending on the coffee." my-teeth)
 
 
 
-;(js/console.log "If I add %d, %d and %d I get %d."
-;                my-age
-;                my-height
-;                my-weight
-;                (+ my-age my-height my-weight))
+(format "If I add %d, %d and %d I get %d."
+                my-age
+                my-height
+                my-weight
+                (+ my-age my-height my-weight))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;; Exercise - 6
 
-;(def x (js/util.format "There are %d types of people." 10))
+(def x (format "There are %d types of people." 10))
 
-;(def binary "binary")
-;(def do-not "don't")
-;(def y (js/util.format "Those who know %s and those who %s" binary do-not))
-
-
-;(println x)
-;(println y)
+(def binary "binary")
+(def do-not "don't")
+(def y (format "Those who know %s and those who %s" binary do-not))
 
 
-;(js/console.log "I said: %j." x)
-;(js/console.log "I also said: %j." y)
+(println x)
+(println y)
 
-;(def hilarious false )
-;(def joke-evaluation "Isn't that joke so funny?! %j")
 
-;(js/console.log joke-evaluation hilarious)
+(format "I said: %j." x)
+(format "I also said: %j." y)
 
-;(def w "This is the left side of ...")
-;(def e "a string with a right side.")
+(def hilarious false )
+(def joke-evaluation "Isn't that joke so funny?! %j")
 
-;(println w e)
+(format joke-evaluation hilarious)
+
+(def w "This is the left side of ...")
+(def e "a string with a right side.")
+
+(println w e)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -176,28 +176,28 @@
 
 ;; Exercise - 19
 
-;(defn cheese-and-crackers [cheese-count boxes-of-crackers]
-;  (js/console.log "You have %d cheeses!" cheese-count)
-;  (js/console.log "You have %d boxes of crackers!" boxes-of-crackers)
-;  (js/console.log "Man that's enough for a party!")
-;  (js/console.log "Get a blanket.\n"))
+(defn cheese-and-crackers [cheese-count boxes-of-crackers]
+(format "You have %d cheeses!" cheese-count)
+(format "You have %d boxes of crackers!" boxes-of-crackers)
+(format "Man that's enough for a party!")
+(format "Get a blanket.\n"))
 
-;(println "We can just give the function numbers directly: ")
-;(cheese-and-crackers 20 30)
+(println "We can just give the function numbers directly: ")
+(cheese-and-crackers 20 30)
 
-;(println "OR, we can use variables from our script:")
-;(def amount-of-cheese 10)
-;(def amount-of-crackers 50)
+(println "OR, we can use variables from our script:")
+(def amount-of-cheese 10)
+(def amount-of-crackers 50)
 
-;(cheese-and-crackers amount-of-cheese amount-of-crackers)
+(cheese-and-crackers amount-of-cheese amount-of-crackers)
 
 
-;(println "We can even do math inside too: ")
-;(cheese-and-crackers (+ 10 20) (+ 5 6))
+(println "We can even do math inside too: ")
+(cheese-and-crackers (+ 10 20) (+ 5 6))
 
-;(println "And we can combine the two, variables and math: ")
+(println "And we can combine the two, variables and math: ")
 
-;(cheese-and-crackers (+ amount-of-cheese 100) (+ amount-of-crackers 1000))
+(cheese-and-crackers (+ amount-of-cheese 100) (+ amount-of-crackers 1000))
 
 
 
@@ -206,9 +206,9 @@
 ;; Exercise - 20
 
 
-(require '[lumo.core :refer [*command-line-args*]])
+;(require '[lumo.core :refer [*command-line-args*]])
 
-(println (str "Hello " (first *command-line-args*) "!"))
+;(println (str "Hello " (first *command-line-args*) "!"))
 
 ;(for [i (rest *command-line-args* )]
 ;  (println i))
