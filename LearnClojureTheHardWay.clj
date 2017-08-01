@@ -10,7 +10,7 @@
 (println "I'd much rather you 'not'.")
 
 ;; This last case is problematic in Clojure
-(println "I /"said/" do not touch this.")
+;(println "I /"said/" do not touch this.")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -70,29 +70,6 @@
 
 
 ;; Exercise - 5
-;; FORMATTED OUTPUT IN CLJS
-
-
-
-
-;(ns foo.bar
-;  (:require
-;    [goog.string :as gstring]
-;    [goog.string.format]))
-
-;(.log js/console (gstring/format "%.2f" 1.2345))
-
-
-;; https://nodejs.org/api/util.html#util_util_format_format_args
-
-
-                                        ;(js/util.format "Hello %s" "world")
-
-                                        ;(.log js/console "Hello %s works" ", World!")
-
-                                        ;(.log js/console "Hello %s" ", World!")
-
-
 
 
 (def my-name "Zed A. Shaw")
@@ -155,7 +132,85 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;; Exercise - 7 / 8 / 9 / 10 
+;; Exercise - 7
+
+
+
+(println "Mary had a little lamb." )
+(format "It's fleece was as white as %s." "snow")
+(println "And everywhere that Mary went.")
+
+(repeat 10 ".")
+
+(def end1 "C")
+(def end2 "h")
+(def end3 "e")
+(def end4 "e")
+(def end5 "e")
+(def end5 "s")
+(def end6 "e")
+(def end7 "B")
+(def end8 "u")
+(def end9 "r")
+(def end10 "g")
+(def end11 "e")
+(def end12 "r")
+
+
+(println (str end1 end2 end3 end4 end5 end6))
+(println (str end7 end8 end9 end10 end11 end12))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise -  8
+
+(def formatter "%s %s %s %s")
+
+
+(format formatter 1 2 3 4)
+
+(format formatter "one" "two" "three" "four")
+
+(format formatter true false false true)
+
+
+(format formatter
+        "I had this thing."
+        "That you could type up right."
+        "But it didn't sing."
+        "So I said goodnight.")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 9 / 10
+
+
+(def days "Mon Tue Wed Thu Fri Sat Sun")
+
+(def months "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug")
+
+
+
+(format "Here are the days %s " days)
+(format "Here are the months %s " months)
+
+
+(println
+"There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we want, or 5,or 6.")
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+(def tabby_cat  "\tI'm tabbed in.")
+(def persian_cat  "I'm split\non a line.")
+(def backslash_cat  "I'm \\ a \\ cat.")
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
@@ -166,7 +221,7 @@
 
 ;; raw input in lumo is an issue as of now.
 
-(read )
+;(read )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -178,11 +233,13 @@
 
 ;; Exercise - 19
 
-(defn cheese-and-crackers [cheese-count boxes-of-crackers]
-(format "You have %d cheeses!" cheese-count)
-(format "You have %d boxes of crackers!" boxes-of-crackers)
-(format "Man that's enough for a party!")
-(format "Get a blanket.\n"))
+(defn cheese-and-crackers
+  [cheese-count boxes-of-crackers]
+
+  (format "You have %d cheeses!" cheese-count)
+  (format "You have %d boxes of crackers!" boxes-of-crackers)
+  (format "Man that's enough for a party!")
+  (format "Get a blanket.\n"))
 
 (println "We can just give the function numbers directly: ")
 (cheese-and-crackers 20 30)
