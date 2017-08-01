@@ -371,3 +371,42 @@ Even 4 lines if we want, or 5,or 6.")
 
 ;(for [i (rest *command-line-args* )]
 ;  (println i))
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 21
+
+
+
+(defn add [arg1 arg2]
+  (println (format "Addition %s + %s " arg1 arg2))
+  (+ arg1 arg2))
+
+
+(defn subtract [arg1 arg2]
+  (println (format "Subtract %s - %s" arg1 arg2))
+  (- arg1 arg2))
+
+
+(defn multiply [arg1 arg2]
+  (println (format "Multiply %s * %s" arg1 arg2))
+  (* arg1 arg2))
+
+
+(defn divide [arg1 arg2]
+  (println (format "Divide %s / %s " arg1 arg2))
+  (/ arg1 arg2))
+
+
+(println "Let's do some maths with just functions!")
+
+
+(def age (add 30 5))
+(def height (subtract 78 4))
+(def weight (multiply 90 2))
+(def iq (divide 100 2))
+
+(println (format "Age : %s Height : %s Weight : %s IQ : %s" age height weight iq ))
