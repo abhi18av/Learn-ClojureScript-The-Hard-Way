@@ -410,3 +410,53 @@ Even 4 lines if we want, or 5,or 6.")
 (def iq (divide 100 2))
 
 (println (format "Age : %s Height : %s Weight : %s IQ : %s" age height weight iq ))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 22 / 23 / 24
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 24
+
+
+(println "Let's practice everything.")
+;(println "You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.")
+
+(def  poem  "
+ \tThe lovely world
+ with logic so firmly planted
+ cannot discern \n the needs of love
+ nor comprehend passion from intuition
+ and requires an explanation
+ \n\t\twhere there is none. " )
+
+(println "--------------")
+(println poem)
+(println "--------------")
+
+
+
+(def five
+  ( + (- 10 2 ) (- 3 6)))
+
+
+;; Understand the highly stateful secret-formatter function on page 101
+(defn secret-formula [started]
+  (let [jelly-beans (* 500 started)
+    (jelly-beans)]))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 25
+
+
+
+(defn break-words [stuff]
+  )
