@@ -28,7 +28,21 @@
 ;
 ;; Exercise - 3
 
-(println "I will; now count my chickens:")
+(print
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 3 commits.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   LearnClojureTheHardWay.clj
+#
+# Untracked files:
+#	.DS_Store
+#
+ln "I will; now count my chickens:")
 
 (println "Hens" (+ 25
                   (def age (read ))
@@ -292,11 +306,27 @@ Even 4 lines if we want, or 5,or 6.")
 
 ;; Exercise - 18
 
+;; Complete this one
+(defn print-two [& args])
 
-(def print-two [ & arguments ]
+(defn print-two-again [arg1 arg2]
+  (println (format "arg1 : %s \narg2 : %s" arg1 arg2)))
+
+(defn print-one [arg1]
+  (println (format "arg1: %s" arg1)))
+
+(defn print-none []
+  (println "I got nothin'!"))
+
+(print-two "Zed" "Shaw")
+
+(print-two-again "Zed" "Shaw")
+
+(print-one "First!")
 
 
-  )
+(print-none)
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
