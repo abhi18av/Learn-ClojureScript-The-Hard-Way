@@ -31,7 +31,19 @@
 (println "I will; now count my chickens:")
 
 (println "Hens" (+ 25
-                   (/ 30 6)))
+                  (def age (read ))
+
+
+(println "How tall are you?")
+(def height (read ))
+
+
+(println "How much do you weigh?")
+(def weight (read ))
+
+(format "So you are %s old, %s tall and %s heavy." age height weight)
+
+ (/ 30 6)))
 
 ;; Need to find out how the remainder/modulus operator works in CLJS
 ;(println "Roosters" (- 100
@@ -182,7 +194,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Exercise - 9 / 10
+;; Exercise - 9
 
 
 (def days "Mon Tue Wed Thu Fri Sat Sun")
@@ -203,7 +215,10 @@ Even 4 lines if we want, or 5,or 6.")
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 10
 
 
 
@@ -211,13 +226,45 @@ Even 4 lines if we want, or 5,or 6.")
 (def persian_cat  "I'm split\non a line.")
 (def backslash_cat  "I'm \\ a \\ cat.")
 
+(def fat_cat
+"I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Grass ")
 
+
+
+(println tabby_cat)
+(println persian_cat)
+(println backslash_cat)
+(println fat_cat)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Exercise - 11 / 12
+;; Exercise - 11
 
 
+(println "How old are you?")
+(def age (read ))
+
+
+(println "How tall are you?")
+(def height (read ))
+
+
+(println "How much do you weigh?")
+(def weight (read ))
+
+(format "So you are %s old, %s tall and %s heavy." age height weight)
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Exercise - 12
+
+
+
+;; Need to test this one out thoroughly! - This will make the 
+(doseq [arg *command-line-args*]
+  (printf "arg='%s'\n" arg))
 
 ;; raw input in lumo is an issue as of now.
 
@@ -225,8 +272,31 @@ Even 4 lines if we want, or 5,or 6.")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Exercise - 13 / 14 / 15 / 16 / 17 / 18
+;; Exercise - 13
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 14
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;; Exercise - 15 / 16 / 17 /
+
+
+
+
+
+
+;; Exercise - 18
+
+
+(def print-two [ & arguments ]
+
+
+  )
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;
