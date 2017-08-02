@@ -573,7 +573,43 @@ Even 4 lines if we want, or 5,or 6.")
 (< buses cars) (print "Maybe we could take the buses.")
 :else (print "We still can't decide."))
 
-
+(if (> people buses)
 (print "Alright, let's just take the buses.")
-(print "Fine, let's stay home then.")
+(print "Fine, let's stay home then."))
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 31
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 32
+
+
+(def the-count [1 2 3 4 5])
+(def fruits ['apples' 'oranges' 'pears' 'apricots'])
+(def change [1 'pennies' 2 'dimes' 3 'quarters'])
+
+
+(for [number the-count]
+  (println (format "this is count %s " number)))
+
+
+(for [fruit fruits]
+  (println (format "this is count %s " fruit)))
+
+
+(for [i change]
+  (println (format "this is count %s " i)))
+
+(def elements [])
+
+(for [i (range 6)]
+  (do
+  (println (format "Adding %s to list." i))
+  (into elements i)))
+
+(println elements)
