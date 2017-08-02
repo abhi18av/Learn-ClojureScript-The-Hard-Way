@@ -458,5 +458,122 @@ Even 4 lines if we want, or 5,or 6.")
 (defn print-last-word [words]
   (println (last words)))
 
-(defn sort-sentences [sentence]
-  (-> sentence break-words sort-words))
+(defn sort-sentence [sentence]
+  (->
+   sentence
+   break-words
+   sort-words))
+
+
+(defn print-first-and-last [sentence]
+  (-> sentence
+      print-first-word
+      print-last-word))
+
+
+(defn print-first-and-last-sorted [sentence]
+  (-> sentence
+      sort-sentence
+      print-first-word
+      print-last-word))
+
+;; Actual Program
+
+
+(def sentence "All good things come to those who wait.")
+
+(def words (break-words sentence))
+
+(def sorted-words (sort-words words))
+
+(print-first-word words)
+
+(print-last-word words)
+
+
+
+(print-first-word sorted-words)
+
+(print-last-word sorted-words)
+
+(print-first-and-last sentence)
+
+(print-first-and-last-sorted sentence)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 28
+
+(and true true)
+
+(and false true)
+
+(and (= 1 1) (= 2 1))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 29
+
+
+(def people 20)
+(def cats 30)
+(def dogs 15)
+
+
+
+(if (< people cats)
+  (println "Too many cats! The world is doomed!"))
+
+(if (> people cats)
+  (println "Not many cats! The world is saved!"))
+
+(if (< people dogs)
+  (println "The world is drooled on!"))
+
+(if (> people cats)
+  (println "The world is dry!"))
+
+
+(def dogs (+ 5 dogs))
+
+
+(if (>= people dogs)
+  (println "People are greater than or equal to dogs."))
+
+(if (<= people dogs)
+  (println "People are less than or equal to dogs."))
+
+(if (= people dogs)
+  (println "People are dogs."))
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Exercise - 30
+
+
+(def people 30)
+(def cars 40)
+(def buses 15)
+
+
+(cond
+(> cars people)  (println "We should take the cars.")
+(< cars people) (println "We should not take the cars.")
+:else (println "We can't decide."))
+
+(cond
+(> buses cars) (print "That's too many buses.")
+(< buses cars) (print "Maybe we could take the buses.")
+:else (print "We still can't decide."))
+
+
+(print "Alright, let's just take the buses.")
+(print "Fine, let's stay home then.")
+
