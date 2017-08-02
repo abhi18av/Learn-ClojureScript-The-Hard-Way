@@ -443,6 +443,20 @@ Even 4 lines if we want, or 5,or 6.")
 ;; Exercise - 25
 
 
+(require '[clojure.string :as clojure.string])
+
 
 (defn break-words [stuff]
-  )
+  (clojure.string/split stuff #" "))
+
+(defn sort-words [words]
+  (sort words))
+
+(defn print-first-word [words]
+  (println (first words)))
+
+(defn print-last-word [words]
+  (println (last words)))
+
+(defn sort-sentences [sentence]
+  (-> sentence break-words sort-words))
